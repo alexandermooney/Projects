@@ -1,0 +1,27 @@
+@function setFontProperties($size: sm) {
+  @if ($size ==sm) {
+    @return (font-size: 1rem, line-height: 1.303rem);
+  }
+
+  @else if ($size ==md) {
+    @return (font-size: 1.125rem, line-height: 1.465rem);
+  }
+
+  @else if ($size ==lg) {
+    @return (font-size: 1.5rem, line-height: 1.954rem);
+  }
+
+  @else if ($size ==xl) {
+    @return (font-size: 3.5rem, line-height: 4.5rem);
+  }
+
+  @else {
+    @return (font-size: 1rem, line-height: 1.303rem);
+  }
+}
+
+@mixin font($size: sm) {
+  $font-properties: setFontProperties($size);
+  font-size: map-get($font-properties, font-size);
+  line-height: map-get($font-properties, line-height);
+}

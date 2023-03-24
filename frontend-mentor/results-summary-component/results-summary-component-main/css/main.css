@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.125rem;
+}
+
+.component__container {
+  width: 100%;
+}
+.component__result {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.component__result .header {
+  font-size: 1.125rem;
+  line-height: 1.465rem;
+  color: hsl(221, 100%, 96%);
+}
+.component__score {
+  background: radial-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+}
+.component__score .user-score {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+}
+.component__score .score-max {
+  font-size: 1rem;
+  line-height: 1.303rem;
+  color: hsl(221, 100%, 96%);
+}
