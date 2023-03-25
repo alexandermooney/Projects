@@ -1,0 +1,22 @@
+$colors: (
+  primary: hsl(273, 85%, 13%),
+  primary-light: hsl(271, 12%, 34%),
+  secondary: hsl(150, 100%, 63%),
+  light: hsl(276, 100%, 99%),
+  white: hsl(0, 0%, 100%)
+);
+
+// Accepted values: primary, primary-light, secondary, light, white
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
+
+$fonts: (
+  heading: ('Fraunces', serif),
+  body: ('Manrope', sans-serif)
+);
+
+// Accepted values: heading, body
+@function font($fontName) {
+  @return map-get($fonts, $fontName);
+}

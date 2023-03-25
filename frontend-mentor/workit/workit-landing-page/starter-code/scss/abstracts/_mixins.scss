@@ -1,0 +1,37 @@
+// Sets font size, line-height and font-weight based on the size parameter. Accepted values: sm, md, lg, xl
+@mixin fontSize($size: sm) {
+  @if $size ==sm {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  @else if $size ==md {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+
+  @else if $size ==lg {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 600;
+  }
+
+  @else if $size ==xl {
+    font-size: 5rem;
+    line-height: 5rem;
+    font-weight: 600;
+  }
+}
+
+// Sets font family and size based on the size parameter. Accepted values: sm, md, lg, xl
+@mixin headingText($size: md) {
+  @include fontSize($size);
+  font-family: font('heading');
+}
+
+@mixin bodyText($size: sm) {
+  @include fontSize($size);
+  font-family: font('body');
+}
