@@ -5,11 +5,19 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+
   &--primary {
     color: color(primary);
     background-color: color(secondary);
     border: 2px solid transparent;
     padding: 1rem 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      padding: .75rem 1.5rem;
+    }
 
     &:hover {
       color: color(secondary);
@@ -23,7 +31,6 @@
     background-color: transparent;
     border: none;
     border-bottom: 2px solid color(secondary);
-    margin: 1rem 1.5rem;
 
     &:hover {
       color: color(secondary);

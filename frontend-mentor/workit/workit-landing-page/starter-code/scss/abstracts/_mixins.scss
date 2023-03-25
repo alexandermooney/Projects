@@ -2,26 +2,50 @@
 @mixin fontSize($size: sm) {
   @if $size ==sm {
     font-size: 1.125rem;
-    line-height: 2rem;
+    line-height: 1.78;
     font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   @else if $size ==md {
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 1.25;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.75rem;
+    }
   }
 
   @else if $size ==lg {
     font-size: 3.5rem;
-    line-height: 4rem;
+    line-height: 1.14;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      font-size: 3rem;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 2rem;
+    }
   }
 
   @else if $size ==xl {
     font-size: 5rem;
-    line-height: 5rem;
+    line-height: 1;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      font-size: 3.75rem;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 3.125rem;
+    }
   }
 }
 
@@ -34,4 +58,11 @@
 @mixin bodyText($size: sm) {
   @include fontSize($size);
   font-family: font('body');
+}
+
+@mixin flex($direction: row, $justify: start, $align: start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }

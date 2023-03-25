@@ -1,0 +1,27 @@
+.heading {
+  font-family: 'Fraunces 144pt', serif;
+
+  &--xl {
+    @include headingText(xl);
+  }
+
+  &--lg {
+    @include headingText(lg);
+  }
+
+  &--md {
+    @include headingText(md);
+  }
+}
+
+.text {
+  font-family: 'Manrope', sans-serif;
+
+  &--sm {
+    @include bodyText(sm);
+  }
+
+  &--md {
+    @include bodyText(md);
+  }
+}
