@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Results Summary Component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="component component__container">
+    <div class="component__result">
+      <h1 class="header">Your Result</h1>
+      <div class="component__score">
+        <p class="user-score">76</p>
+        <p class="score-max">of 100</p>
+      </div>
+      <div class="component__description">
+        <h3 class="header">Great</h3>
+        <p class="text">Your performance exceeded 65% of the people conducting the test here!
+        </p>
+      </div>
+    </div>
+    <div class="component__summary">
+      <h2 class="header">Summary</h2>
+      <div class="component__allscores">
+        <div class="component__scorecard">
+          <div class="component__scorecard__title">
+            <img class="icon" src="assets/images/icon-reaction.svg">
+            <span class="name">Reaction</span>
+          </div>
+          <div class="component__scorecard__score">
+            <span class="score">80 <span class="score--gray">/ 100</span></span>
+          </div>
+        </div>
+        <div class="component__scorecard">
+          <div class="component__scorecard__title">
+            <img class="icon" src="assets/images/icon-memory.svg">
+            <span class="name">Memory</span>
+          </div>
+          <div class="component__scorecard__score">
+            <span class="score">92 <span class="score--gray">/ 100</span></span>
+          </div>
+        </div>
+        <div class="component__scorecard">
+          <div class="component__scorecard__title">
+            <img class="icon" src="assets/images/icon-verbal.svg">
+            <span class="name">Verbal</span>
+          </div>
+          <div class="component__scorecard__score">
+            <span class="score">61 <span class="score--gray">/ 100</span></span>
+          </div>
+        </div>
+        <div class="component__scorecard">
+          <div class="component__scorecard__title">
+            <img class="icon" src="assets/images/icon-Visual.svg">
+            <span class="name">Visual</span>
+          </div>
+          <div class="component__scorecard__score">
+            <span class="score">73 <span class="score--gray">/ 100</span></span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn">Continue</button>
+    </div>
+  </div>
+</body>
+
+</html>

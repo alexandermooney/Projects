@@ -6,6 +6,7 @@ $colors-primary: (
   blue: hsl(234, 85%, 45%)
 );
 
+// Neutral Colors
 $colors-neutral: (
   white: hsl(0, 0%, 100%),
   paleblue: hsl(221, 100%, 96%),
@@ -13,10 +14,12 @@ $colors-neutral: (
   grayblue: hsl(224, 30%, 27%)
 );
 
+// Gradients
 $colors-gradient: (
-  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)),
-  circle: radial-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0))
+  background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%),
+  circle: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%),
 );
+
 
 @function color($color-type, $color-name) {
   @if $color-type =='primary' {
@@ -34,4 +37,15 @@ $colors-gradient: (
   @else {
     @error 'Invalid color type #{$color-type}';
   }
+}
+
+// Font Weights
+$font-weight: (
+  regular: 500,
+  bold: 700,
+  black: 800
+);
+
+@function fw($font-weight-name) {
+  @return map-get($font-weight, $font-weight-name);
 }

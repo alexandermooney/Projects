@@ -1,3 +1,4 @@
+// Font Size / Line Height
 @function setFontProperties($size: sm) {
   @if ($size ==sm) {
     @return (font-size: 1rem, line-height: 1.303rem);
@@ -24,4 +25,12 @@
   $font-properties: setFontProperties($size);
   font-size: map-get($font-properties, font-size);
   line-height: map-get($font-properties, line-height);
+}
+
+// Flex
+@mixin flex($direction: row, $justify: start, $align: start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }

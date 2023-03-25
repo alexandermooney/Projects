@@ -1,0 +1,192 @@
+.component {
+  &__container {
+    width: 100%;
+    background-color: color(neutral, white);
+
+    @media screen and (min-width: 736px) {
+      max-width: 46rem;
+      @include flex(row, center, stretch);
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+  }
+
+  &__result {
+    padding: 1.5rem;
+    background: color(gradient, background);
+    color: color(neutral, paleblue);
+    text-align: center;
+    @include flex(column, space-between, center);
+    gap: 1.5rem;
+    border-radius: 0 0 2rem 2rem;
+
+    .header {
+      @include font(md);
+
+      @media screen and (min-width: 736px) {
+        @include font(lg);
+      }
+    }
+
+    @media screen and (min-width: 736px) {
+      padding: 2.375rem;
+      width: 50%;
+      border-radius: 2rem;
+    }
+  }
+
+  &__score {
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 50%;
+    background: color(gradient, circle);
+    @include flex(column, center, center);
+
+    @media screen and (min-width: 736px) {
+      width: 12.5rem;
+      height: 12.5rem;
+    }
+
+    .user-score {
+      @include font(xl);
+      font-weight: fw(black);
+      color: color(neutral, white);
+
+      @media screen and (min-width: 736px) {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+      }
+    }
+
+    .score-max {
+      color: color(neutral, paleblue);
+
+      @media screen and (min-width: 736px) {
+        @include font(md);
+      }
+    }
+  }
+
+  &__description {
+    @include flex(column, center, center);
+    gap: .5rem;
+    max-width: 16.25rem;
+
+    .header {
+      color: color(neutral, white);
+      font-weight: fw(bold);
+
+      @media screen and (min-width: 736px) {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (min-width: 736px) {
+      .text {
+        @include font(md);
+      }
+    }
+
+  }
+
+  &__summary {
+    padding: 1.875rem;
+    @include flex(column, space-between, start);
+    gap: 1.5rem;
+
+    @media screen and (min-width: 736px) {
+      width: 50%;
+      padding: 2.375rem;
+    }
+
+    .header {
+      @include font(md);
+      font-weight: fw(bold);
+
+      @media screen and (min-width: 736px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      background-color: color(neutral, grayblue);
+      color: color(neutral, white);
+      font-size: font(md);
+      font-weight: fw(bold);
+      border: none;
+      border-radius: 8rem;
+      cursor: pointer;
+
+      &:hover {
+        background: color(gradient, background);
+      }
+    }
+  }
+
+  &__allscores {
+    @include flex(column, space-between, center);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  &__scorecard {
+    @include flex(row, space-between, center);
+    width: 100%;
+    padding: 1rem;
+    border-radius: .75rem;
+    font-size: font(sm);
+
+    @media screen and (min-width: 736px) {
+      font-size: font(md);
+    }
+
+    // sets the background color and font color of the scorecard based on the index of the scorecard
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        @if $i ==1 {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FF5555;
+
+          .name {
+            color: color(primary, red);
+          }
+        }
+
+        @else if $i ==2 {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FFB21E;
+
+          .name {
+            color: color(primary, orange);
+          }
+        }
+
+        @else if $i ==3 {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #00BB8F;
+
+          .name {
+            color: color(primary, teal);
+          }
+        }
+
+        @else if $i ==4 {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #1125D6;
+
+          .name {
+            color: color(primary, blue);
+          }
+        }
+      }
+    }
+
+    &__title {
+      @include flex(row, center, center);
+      gap: .75rem;
+    }
+
+    .score--gray {
+      color: color(neutral, grayblue);
+      opacity: .5;
+    }
+  }
+}
