@@ -90,6 +90,37 @@ main {
   height: calc(100% + 10rem);
 }
 
+.cta {
+  padding: 3rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cta__img {
+  width: 17.5rem;
+  z-index: -1;
+  transform: translateY(5.5rem);
+}
+.cta__img img {
+  width: 100%;
+}
+.cta__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: hsl(273, 85%, 13%);
+  color: hsl(0, 0%, 100%);
+}
+.cta__info .btn {
+  margin-top: 0.5rem;
+}
+
 .hero {
   background-color: hsl(273, 85%, 13%);
   min-height: 60vh;
@@ -130,14 +161,14 @@ main {
   width: 80%;
   max-width: 300px;
   position: absolute;
-  bottom: -25%;
+  bottom: -21%;
 }
 .hero__img img {
   max-width: 100%;
 }
 
 .perks {
-  padding: 12.5rem 1rem 1rem;
+  padding: 11rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,6 +203,7 @@ main {
 .perks__number {
   width: 3rem;
   height: 3rem;
+  margin-bottom: 0.5rem;
   border: 1px solid hsl(271, 12%, 34%);
   border-radius: 100%;
   font-family: "Fraunces 144pt", serif;
