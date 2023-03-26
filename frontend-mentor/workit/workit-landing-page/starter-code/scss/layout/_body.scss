@@ -1,4 +1,8 @@
 body {
   position: relative;
-  overflow: hidden;
+}
+
+main {
+  overflow-x: hidden;
+  height: calc(100% + 10rem);
 }

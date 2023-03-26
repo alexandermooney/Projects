@@ -1,22 +1,22 @@
 .btn {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
-  @media screen and (max-width: 768px) {
-    font-size: 1rem;
+  @media screen and (min-width: 768.1px) {
+    font-size: 1.125rem;
   }
 
   &--primary {
     color: color(primary);
     background-color: color(secondary);
     border: 2px solid transparent;
-    padding: 1rem 1.5rem;
+    padding: .75rem 1.5rem;
 
-    @media screen and (max-width: 768px) {
-      padding: .75rem 1.5rem;
+    @media screen and (min-width: 768.1px) {
+      padding: 1rem 1.5rem;
     }
 
     &:hover {

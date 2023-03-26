@@ -30,26 +30,26 @@ body {
 }
 
 .btn {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768.1px) {
   .btn {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 .btn--primary {
   color: hsl(273, 85%, 13%);
   background-color: hsl(150, 100%, 63%);
   border: 2px solid transparent;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768.1px) {
   .btn--primary {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 }
 .btn--primary:hover {
@@ -74,11 +74,20 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+body {
+  position: relative;
+}
+
+main {
+  overflow-x: hidden;
+  height: calc(100% + 10rem);
 }
 
 .hero {
@@ -90,6 +99,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 90;
 }
 .hero::before {
   content: "";
@@ -100,7 +110,7 @@ body {
   border-radius: 100%;
   width: 200%;
   height: 50%;
-  background-color: hsl(273, 85%, 13%);
+  background-color: inherit;
   transform: translateY(10%);
   z-index: -1;
 }
@@ -126,55 +136,116 @@ body {
   max-width: 100%;
 }
 
-body {
+.perks {
+  padding: 12.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
   position: relative;
-  overflow: hidden;
+  z-index: 80;
+  text-align: center;
+  color: hsl(273, 85%, 13%);
+  background-color: hsl(276, 100%, 99%);
+}
+.perks::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 200%;
+  height: 50%;
+  background-color: inherit;
+  transform: translateY(10%);
+  z-index: -1;
+}
+.perks__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.perks__number {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid hsl(271, 12%, 34%);
+  border-radius: 100%;
+  font-family: "Fraunces 144pt", serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768.1px) {
+  .perks__number {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    line-height: 1.667;
+  }
+}
+.perks__description {
+  font-size: 1rem;
+  line-height: 1.78;
+  font-weight: 400;
+  color: hsl(271, 12%, 34%);
+}
+@media screen and (min-width: 768.1px) {
+  .perks__description {
+    font-size: 1.125rem;
+  }
 }
 
 .heading {
   font-family: "Fraunces 144pt", serif;
 }
 .heading--xl {
-  font-size: 5rem;
+  font-size: 3.125rem;
   line-height: 1;
   font-weight: 600;
   font-family: "Fraunces 144pt", serif;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375.1px) {
   .heading--xl {
     font-size: 3.75rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 768.1px) {
   .heading--xl {
-    font-size: 3.125rem;
+    font-size: 5rem;
   }
 }
 .heading--lg {
-  font-size: 3.5rem;
+  font-size: 2rem;
   line-height: 1.14;
   font-weight: 600;
   font-family: "Fraunces 144pt", serif;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375.1px) {
   .heading--lg {
     font-size: 3rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 768.1px) {
   .heading--lg {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 }
 .heading--md {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.25;
   font-weight: 600;
   font-family: "Fraunces 144pt", serif;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768.1px) {
   .heading--md {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 
@@ -182,25 +253,25 @@ body {
   font-family: "Manrope", sans-serif;
 }
 .text--sm {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.78;
   font-weight: 400;
   font-family: "Manrope", sans-serif;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768.1px) {
   .text--sm {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 .text--md {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.25;
   font-weight: 600;
   font-family: "Manrope", sans-serif;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768.1px) {
   .text--md {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 

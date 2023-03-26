@@ -1,51 +1,55 @@
 // Sets font size, line-height and font-weight based on the size parameter. Accepted values: sm, md, lg, xl
 @mixin fontSize($size: sm) {
   @if $size ==sm {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.78;
     font-weight: 400;
 
-    @media screen and (max-width: 768px) {
-      font-size: 1rem;
+    @media screen and (min-width: 768.1px) {
+      font-size: 1.125rem;
     }
   }
 
   @else if $size ==md {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.25;
     font-weight: 600;
 
-    @media screen and (max-width: 768px) {
-      font-size: 1.75rem;
-    }
-  }
-
-  @else if $size ==lg {
-    font-size: 3.5rem;
-    line-height: 1.14;
-    font-weight: 600;
-
-    @media screen and (max-width: 768px) {
-      font-size: 3rem;
-    }
-
-    @media screen and (max-width: 375px) {
+    @media screen and (min-width: 768.1px) {
       font-size: 2rem;
     }
   }
 
+  @else if $size ==lg {
+    font-size: 2rem;
+    line-height: 1.14;
+    font-weight: 600;
+
+    @media screen and (min-width: 375.1px) {
+      font-size: 3rem;
+    }
+
+    @media screen and (min-width: 768.1px) {
+      font-size: 3.5rem;
+    }
+
+
+  }
+
   @else if $size ==xl {
-    font-size: 5rem;
+    font-size: 3.125rem;
     line-height: 1;
     font-weight: 600;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 375.1px) {
       font-size: 3.75rem;
     }
 
-    @media screen and (max-width: 375px) {
-      font-size: 3.125rem;
+    @media screen and (min-width: 768.1px) {
+      font-size: 5rem;
     }
+
+
   }
 }
 
@@ -65,4 +69,20 @@
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin curve {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 200%;
+    height: 50%;
+    background-color: inherit;
+    transform: translateY(10%);
+    z-index: -1;
+  }
 }
