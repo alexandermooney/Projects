@@ -9,9 +9,21 @@
   color: color(primary);
   background-color: color(light);
 
+
+  @media screen and (min-width: 480px) {
+    padding: 11rem 2.5rem 2.5rem;
+  }
+
   &__item {
     @include flex(column, center, center);
     gap: 1rem;
+
+    @media screen and (min-width: 480px) {
+      max-width: 39rem;
+      flex-direction: row;
+      gap: 2rem;
+      text-align: start;
+    }
   }
 
   &__number {
@@ -24,13 +36,18 @@
     font-size: 1.25rem;
     line-height: 1.8;
     @include flex(column, center, center);
+    flex-shrink: 0;
 
-    @media screen and (min-width: 768.1px) {
+    @media screen and (min-width: 480px) {
       width: 3.5rem;
       height: 3.5rem;
       font-size: 1.5rem;
       line-height: 1.667;
     }
+  }
+
+  &__header {
+    margin-bottom: 1rem;
   }
 
   &__description {

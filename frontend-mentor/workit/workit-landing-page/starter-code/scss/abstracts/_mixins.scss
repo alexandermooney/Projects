@@ -5,7 +5,7 @@
     line-height: 1.78;
     font-weight: 400;
 
-    @media screen and (min-width: 768.1px) {
+    @media screen and (min-width: 768px) {
       font-size: 1.125rem;
     }
   }
@@ -15,7 +15,7 @@
     line-height: 1.25;
     font-weight: 600;
 
-    @media screen and (min-width: 768.1px) {
+    @media screen and (min-width: 768px) {
       font-size: 2rem;
     }
   }
@@ -25,11 +25,11 @@
     line-height: 1.14;
     font-weight: 600;
 
-    @media screen and (min-width: 375.1px) {
+    @media screen and (min-width: 480px) {
       font-size: 3rem;
     }
 
-    @media screen and (min-width: 768.1px) {
+    @media screen and (min-width: 768px) {
       font-size: 3.5rem;
     }
 
@@ -41,11 +41,11 @@
     line-height: 1;
     font-weight: 600;
 
-    @media screen and (min-width: 375.1px) {
+    @media screen and (min-width: 480px) {
       font-size: 3.75rem;
     }
 
-    @media screen and (min-width: 768.1px) {
+    @media screen and (min-width: 768px) {
       font-size: 5rem;
     }
 

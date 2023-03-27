@@ -7,4 +7,12 @@
   width: 100%;
   z-index: 100;
   @include flex(row, space-between, center);
+
+  @media screen and (min-width: 480px) {
+    padding: 2rem 2.5rem;
+  }
+
+  @media screen and (min-width: 996px) {
+    padding: 3.5rem 2.5rem;
+  }
 }

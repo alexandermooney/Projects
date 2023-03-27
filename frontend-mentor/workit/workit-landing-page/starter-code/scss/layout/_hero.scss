@@ -1,11 +1,21 @@
 .hero {
   background-color: color(primary);
-  min-height: 60vh;
+  min-height: 50vh;
   position: relative;
   padding-top: 2rem;
   @include flex(column, center, center);
   z-index: 90;
   @include curve;
+
+  @media screen and (min-width: 480px) {
+    min-height: 65vh;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 75vh;
+    margin-bottom: 4rem;
+  }
 
   &__content {
     @include flex(column, center, center);
@@ -16,14 +26,14 @@
     text-align: center;
     color: color(white);
 
-    @media screen and (min-width: 375.1px) {
+    @media screen and (min-width: 480px) {
       max-width: 30rem;
     }
 
   }
 
   &__img {
-    width: 80%;
+    width: max(17rem, 75%);
     position: absolute;
     bottom: -8rem;
 
@@ -31,22 +41,28 @@
       max-width: 100%;
     }
 
-    @media screen and (min-width: 375.1px) {
-      max-width: 22rem;
+    @media screen and (min-width: 480px) {
+      bottom: -9.5rem;
+      max-width: clamp(17rem, 75%, 25rem);
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: -12.5rem;
+      max-width: clamp(25rem, 55%, 35rem);
     }
   }
 
   &__pattern {
     display: none;
 
-    @media screen and (min-width: 375.1px) {
+    @media screen and (min-width: 480px) {
       display: block;
       position: absolute;
       width: auto;
       height: auto;
 
       &--1 {
-        top: 8rem;
+        top: 9rem;
         left: -14rem;
       }
 
