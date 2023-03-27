@@ -90,6 +90,9 @@ body {
     padding: 3.5rem 2.5rem;
   }
 }
+.header .logo {
+  cursor: pointer;
+}
 
 body {
   position: relative;
@@ -106,6 +109,23 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+.cta__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .cta__wrapper {
+    transform: translateX(6rem);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cta__wrapper {
+    transform: translateX(12.5rem);
+  }
 }
 @media screen and (min-width: 480px) {
   .cta {
@@ -155,17 +175,17 @@ main {
 }
 @media screen and (min-width: 768px) {
   .cta__info {
-    width: 75%;
-    margin-left: auto;
+    max-width: 75%;
     text-align: left;
     align-items: start;
+    padding: 3.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .cta__info {
-    max-width: 37.5rem;
+    max-width: 40rem;
     margin: 0 auto;
-    transform: translateX(10rem);
+    padding: 4rem;
   }
 }
 .cta__info .btn {
@@ -182,6 +202,12 @@ main {
     visibility: visible;
   }
 }
+@media screen and (min-width: 1200px) {
+  .cta__pattern {
+    bottom: -4rem;
+    right: 2rem;
+  }
+}
 
 .footer {
   padding: 4.625rem 1rem 4rem;
@@ -191,6 +217,9 @@ main {
   align-items: center;
   gap: 3.5rem;
 }
+.footer__logo {
+  cursor: pointer;
+}
 .footer__sm-icons {
   display: flex;
   flex-direction: row;
@@ -198,6 +227,9 @@ main {
   align-items: center;
   gap: 1.75rem;
   list-style: none;
+}
+.footer__sm-icons .sm-icons__icon {
+  cursor: pointer;
 }
 
 .hero {

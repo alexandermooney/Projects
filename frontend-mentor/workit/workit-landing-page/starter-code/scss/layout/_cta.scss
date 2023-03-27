@@ -1,6 +1,19 @@
 .cta {
   padding: 21rem 1rem 0; // or 21.75rem
   @include flex(column, center, center);
+  margin: 0 auto;
+
+  &__wrapper {
+    @include flex(column, center, center);
+
+    @media screen and (min-width: 768px) {
+      transform: translateX(6rem);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateX(12.5rem);
+    }
+  }
 
   @media screen and (min-width: 480px) {
     padding: 21rem 2.5rem 0;
@@ -44,16 +57,16 @@
     position: relative;
 
     @media screen and (min-width: 768px) {
-      width: 75%;
-      margin-left: auto;
+      max-width: 75%;
       text-align: left;
       align-items: start;
+      padding: 3.5rem;
     }
 
     @media screen and (min-width: 1200px) {
-      max-width: 37.5rem;
+      max-width: 40rem;
       margin: 0 auto;
-      transform: translateX(10rem);
+      padding: 4rem;
     }
 
     & .btn {
@@ -69,6 +82,11 @@
 
     @media screen and (min-width: 768px) {
       visibility: visible;
+    }
+
+    @media screen and (min-width: 1200px) {
+      bottom: -4rem;
+      right: 2rem;
     }
   }
 }
