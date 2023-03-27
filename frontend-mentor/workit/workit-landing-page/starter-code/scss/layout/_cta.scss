@@ -1,11 +1,32 @@
 .cta {
-  padding: 3rem 1rem 1rem; // or 21.75rem
+  padding: 21rem 1rem 0; // or 21.75rem
   @include flex(column, center, center);
+
+  @media screen and (min-width: 480px) {
+    padding: 21rem 2.5rem 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 75rem;
+  }
 
   &__img {
     width: 17.5rem;
+    position: absolute;
+    top: -14.5rem;
     z-index: -1;
-    transform: translateY(5.5rem);
+
+    @media screen and (min-width: 768px) {
+      top: -9.25rem;
+      left: -11rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: -11.25rem;
+      left: -25rem;
+      width: 30rem;
+      z-index: -1;
+    }
 
     & img {
       width: 100%;
@@ -20,9 +41,34 @@
     text-align: center;
     background-color: color(primary);
     color: color(white);
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      width: 75%;
+      margin-left: auto;
+      text-align: left;
+      align-items: start;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 37.5rem;
+      margin: 0 auto;
+      transform: translateX(10rem);
+    }
 
     & .btn {
       margin-top: .5rem;
+    }
+  }
+
+  &__pattern {
+    visibility: hidden;
+    position: absolute;
+    bottom: -7rem;
+    right: .5rem;
+
+    @media screen and (min-width: 768px) {
+      visibility: visible;
     }
   }
 }
