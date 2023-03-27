@@ -1,0 +1,11 @@
+.footer {
+  padding: 4.625rem 1rem 4rem;
+  @include flex(column, center, center);
+  gap: 3.5rem;
+
+  &__sm-icons {
+    @include flex(row, center, center);
+    gap: 1.75rem;
+    list-style: none;
+  }
+}

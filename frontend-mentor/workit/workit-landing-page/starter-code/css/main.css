@@ -121,6 +121,23 @@ main {
   margin-top: 0.5rem;
 }
 
+.footer {
+  padding: 4.625rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+.footer__sm-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
 .hero {
   background-color: hsl(273, 85%, 13%);
   min-height: 60vh;
@@ -157,14 +174,45 @@ main {
   text-align: center;
   color: hsl(0, 0%, 100%);
 }
+@media screen and (min-width: 375.1px) {
+  .hero__content {
+    max-width: 30rem;
+  }
+}
 .hero__img {
   width: 80%;
-  max-width: 300px;
   position: absolute;
-  bottom: -21%;
+  bottom: -8rem;
 }
 .hero__img img {
   max-width: 100%;
+}
+@media screen and (min-width: 375.1px) {
+  .hero__img {
+    max-width: 22rem;
+  }
+}
+.hero__pattern {
+  display: none;
+}
+@media screen and (min-width: 375.1px) {
+  .hero__pattern {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+  .hero__pattern--1 {
+    top: 8rem;
+    left: -14rem;
+  }
+  .hero__pattern--2 {
+    bottom: 2rem;
+    right: -6rem;
+  }
+}
+.hero__pattern img {
+  width: 100%;
 }
 
 .perks {

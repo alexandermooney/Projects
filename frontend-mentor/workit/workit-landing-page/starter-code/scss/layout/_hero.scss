@@ -15,16 +15,49 @@
     padding: 0 1rem;
     text-align: center;
     color: color(white);
+
+    @media screen and (min-width: 375.1px) {
+      max-width: 30rem;
+    }
+
   }
 
   &__img {
     width: 80%;
-    max-width: 300px;
     position: absolute;
-    bottom: -21%;
+    bottom: -8rem;
 
     & img {
       max-width: 100%;
+    }
+
+    @media screen and (min-width: 375.1px) {
+      max-width: 22rem;
+    }
+  }
+
+  &__pattern {
+    display: none;
+
+    @media screen and (min-width: 375.1px) {
+      display: block;
+      position: absolute;
+      width: auto;
+      height: auto;
+
+      &--1 {
+        top: 8rem;
+        left: -14rem;
+      }
+
+      &--2 {
+        bottom: 2rem;
+        right: -6rem;
+      }
+    }
+
+    & img {
+      width: 100%;
     }
   }
 }
